@@ -52,12 +52,19 @@ func SetFocus(hwnd win.HWND) win.HWND {
 	return win.SetFocus(hwnd)
 }
 
-// GetMian get the main display hwnd
+// SetFocus brings the window specified by hwnd into the foreground.
+//
+// Returns a bool indicating whether the window was successfully brought into the foreground.
+func SetForegroundWindow(hwnd win.HWND) bool {
+	return win.SetForegroundWindow(hwnd)
+}
+
+// GetMain get the main display hwnd
 func GetMain() win.HWND {
 	return win.GetActiveWindow()
 }
 
-// GetMianId get the main display id
+// GetMainId get the main display id
 func GetMainId() int {
 	return int(GetMain())
 }
